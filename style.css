@@ -1,0 +1,22 @@
+#app{
+  background-color: rgb(18, 18, 18);
+}
+h1{
+  color: rgb(31, 223, 100);
+}
+
+.card{
+  background-color: rgb(69, 69, 67);
+  border: 2px solid white;
+}
+
+.card-title{
+  color: rgb(31, 223, 100);
+}
+.singer{
+  color: rgb(18, 18, 18);
+}
+.card-text{
+  color: rgb(18, 18, 18);
+  font-size: 1.2rem;
+}
