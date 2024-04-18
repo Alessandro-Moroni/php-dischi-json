@@ -36,8 +36,15 @@ createApp({
       axios.post(this.apiUrl, data)
       .then(result => {
         this.list = result.data;
-
+        this.newDisco = {
+          title: '',
+          author: '',
+          year: '',
+          poster: '',
+          genre: '',
+        }
       })
+
     },
 
     removeAlbum(index){
@@ -49,7 +56,7 @@ createApp({
         this.list = result.data;
 
       })
-      
+
     }
 
   },
