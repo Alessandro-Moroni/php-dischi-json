@@ -38,6 +38,18 @@ createApp({
         this.list = result.data;
 
       })
+    },
+
+    removeAlbum(index){
+      const data = new FormData();
+      data.append('deleteIndex', index);
+
+      axios.post(this.apiUrl, data)
+      .then(result => {
+        this.list = result.data;
+
+      })
+      
     }
 
   },

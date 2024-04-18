@@ -17,6 +17,12 @@ if(isset($_POST['newAlbumTitle'])){
   file_put_contents('dischi.json', json_encode($list));
 }
 
+if(isset($_POST['deleteIndex'])){
+  $deleteIndex = $_POST['deleteIndex'];
+  array_splice($list, $deleteIndex, 1);
+  file_put_contents('dischi.json', json_encode($list));
+}
+
 header('Content-Type: application/json');
 
 echo json_encode($list);

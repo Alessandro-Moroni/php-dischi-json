@@ -35,11 +35,16 @@ input{
 label{
   text-shadow: rgb(31, 223, 100) 1px 0 10px;
 }
-.btn{
+.green{
   background-color: rgb(31, 223, 100) ;
   height: 40px;
 }
-.btn:hover{
+.green:hover{
   background-color: rgb(53, 161, 93) ;
-
+}
+.delate{
+  background-color: rgb(216, 63, 63);
+}
+.delate:hover{
+  background-color: rgb(162, 55, 55);
 }
