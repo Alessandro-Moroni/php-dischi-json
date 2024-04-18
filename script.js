@@ -3,9 +3,16 @@ const { createApp } = Vue;
 createApp({
   data(){
     return{
-      title: 'PHP Dischi JSON',
+      titolo: 'PHP Dischi JSON',
       apiUrl: 'server.php',
       list: [],
+      newDisco:{
+        title: '',
+        author: '',
+        year: '',
+        poster: '',
+        genre: '',
+      }
     }
   },
 
@@ -16,7 +23,23 @@ createApp({
         this.list = result.data;
         console.log(this.list);
       })
+    },
+
+    addDisco(){
+      const data = new FormData();
+      data.append('newAlbumTitle', this.newDisco.title);
+      data.append('newAlbumAuthor', this.newDisco.author);
+      data.append('newAlbumYear', this.newDisco.year);
+      data.append('newAlbumPoster', this.newDisco.poster);
+      data.append('newAlbumGenre', this.newDisco.genre);
+
+      axios.post(this.apiUrl, data)
+      .then(result => {
+        this.list = result.data;
+
+      })
     }
+
   },
 
   mounted(){
